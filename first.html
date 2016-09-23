@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// alert("You are working with jquery");
+
+		$('a').click(function(){
+			alert("You are now leaving the page");
+		})
+
+		$('#Hide').click(function(){
+			$('p').hide();
+		})
+
+		$('#Show').click(function(){
+			$('p').show();
+		},function(){alert("Now invoking second function!")})
+
+		$('h3').mouseenter(function(){
+			$('h2').text('go see space needle!');
+		})
+
+		$('h3').mouseleave(function(){
+			$('h2').text('Seattle,WA');
+		})
+
+		$('.append').click(function(){
+			$('.result').append('<span>this is the added text</span>');
+		})
+
+		$('button').click(function(){
+			$('button').css('background-color','yellow');
+		})
+
+		var myText = $('p').text();
+        $('p').hover(function(){
+        	alert("You are hovering over paragraphs")
+        });
+
+
+
+
+
+	})
+
+</script>
+	<title></title>
+</head>
+
+<body>
+<div class="result"></div>
+<p>This is a paragragh</p>
+<p>This is also a paragraph</p>
+<button id="Hide">This will hide all paragraphs</button>
+<button id="Show">This will show all paragraphs</button>
+<a id="mylink" href="http://www.google.com">Go to google</a>
+<h3>Mountainview,CA</h3>
+<h2>Seattle,WA</h3>
+<button class="append">Click to see .append work!</button>
+<div class="result"></div>
+</body>
+</html>
